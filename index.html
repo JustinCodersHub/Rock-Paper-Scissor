@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper & Scissors</title>
+    <link rel="shorcut icon" type="x-icon" href="img/avatar/robot.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="Starting" id="starting">
+    <div class="startWrap">
+        <div>
+        <p id="invalid"></p>
+        <p id="success"></p>
+        <input type="text" name="" id="getName" placeholder="Enter your name...">
+        </div>
+
+        <div>
+        <button id="validateName" onclick="validate()">ENTER</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="choosegender">
+    <div id="chooseone">
+        <div id="gender">Welcome,<span id="myName"></span>!</div>
+        <h4 id="titlegender">Choose your gender:</h4>
+        <div id="role">
+            <div id="manavatar">
+                <button id="bgbtn" onclick="getMaleAvatar()">
+                <img style="width: 170px;" src="img/avatar/man.png" alt=""></button>
+            </div>
+
+            <div id="womanavatar">
+                <button id="bgbtn" onclick="getFemaleAvatar()">
+                <img style="width: 150px;" src="img/avatar/woman.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <span id="lalaki">Male</span>
+        <span id="babae">Female</span>
+    </div>
+</div>
+    
+
+<div class="battle">
+    <div class="winorloss">
+        
+        <div class="playerScore">
+            <p class="playerScorecount" id="playerCount">0</p>
+        </div>
+
+        <div>
+            <p id="gamedecide"></p>
+        </div>
+
+        <div class="botScore">
+            <p class="botScorecount" id="botCount">0</p>
+        </div>
+
+    </div>
+
+    <div class="wrapplayer">
+        <div class="containerpic">
+            
+            <img id="ipickrock" src="img/moves/rock.JPG">
+            <img id="ipickpaper" src="img/moves/paper.JPG">
+            <img id="ipickscissors" src="img/moves/scissor.JPG">
+          
+        </div>
+            
+        <div class="containerpic">
+            
+            <img id="botpickrock" src="img/moves/rock.JPG">
+            <img id="botpickpaper" src="img/moves/paper.JPG">
+            <img id="botpickscissors" src="img/moves/scissor.JPG">
+
+        </div>
+    </div>
+
+    <div>
+        <img class="versus" src="img/other/versus.png" alt="">
+    </div>
+
+    
+</div>
+
+<div class="playerIcon">
+    <img class="icon" src="img/avatar/questionmark.gif" alt="Question Mark">
+
+    <img id="maleavatar" src="img/avatar/man.png" alt="Male Avatar">
+    
+    <img id="femaleavatar" src="img/avatar/woman.png" alt="Female Avatar">
+    
+</div>
+
+<div class="namewrap">
+<p class="name">Name: <span id="ign"></span></p>
+</div>
+
+<div class="playerMoves">
+
+    <div class="items"><button id="manyattemptsRock" class="playerPick" onclick="playerrock()"><img class="imghover" src="img/moves/rock.JPG" alt="rock"></button></div>
+    <div class="items"><button id="manyattemptsPaper" class="playerPick" onclick="playerpaper()"><img class="imghover"  src="img/moves/paper.JPG" alt="paper"></button></div>
+    <div class="items"><button id="manyattemptsScissor" class="playerPick" onclick="playerscissors()"><img class="imghover"  src="img/moves/scissor.JPG" alt=""></button></div>
+</div>
+
+<div class="titleMoves">
+   <span class="componentRock">Rock</span>
+   <span class="componentPaper">Paper</span>
+   <span class="componentScissors">Scissors</span>
+</div>
+
+<!-- Bot Table -->
+
+<div class="botplayerIcon">
+    <img class="icon" src="img/avatar/robot.jpg" alt="">
+</div>
+
+<div class="botnamewrap">
+<p class="botname">Computer</p>
+</div>
+
+<div class="botMoves">
+
+    <div class="items"><button class="botPick"><img class="imghover" src="img/moves/rock.JPG" alt="rock"></button></div>
+
+    <div class="items"><button class="botPick"><img class="imghover" id="paperPlayer"  src="img/moves/paper.JPG" alt="paper"></button></div>
+
+    <div class="items"><button class="botPick"><img class="imghover" id="scissorsPlayer"   src="img/moves/scissor.JPG" alt=""></button></div>
+</div>
+
+<div class="bottitleMoves">
+   <span class="componentRock">Rock</span>
+   <span class="componentPaper">Paper</span>
+   <span class="componentScissors">Scissors</span>
+</div>
+
+<div id="warnbg">
+    <div id="warnClck">
+    <h1 style="text-align: center; background-color: rgba(0, 0, 0, 0.7); border: 1px solid black; color: white;">Warning</h1>
+    <p class="messageWarn">To prevent receiving a warning, refrain from clicking multiple times.</p>
+
+        <button id="underS" onclick="understand()">Understand</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
